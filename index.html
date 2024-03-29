@@ -7,7 +7,6 @@
     crossorigin="anonymous" />
     <title>Todo List</title>
   <style>
-    /* 스타일링 */
     .completed {
       text-decoration: line-through;
       color: gray; 
@@ -17,6 +16,10 @@
         background-color:  rgb(164, 164, 192);
        
     }
+    .list-group-item{
+        background-color: rgba(255, 255, 255, 0.802);
+    }
+
   </style>
 </head>
 <body>
@@ -63,11 +66,10 @@
         doneButton.onclick = function() {
     
             item.classList.toggle('completed');
-
             doneButton.classList.toggle('btn-danger');
             doneButton.classList.toggle('btn-success');
             doneButton.innerText = doneButton.innerText === '완료' ? '취소' : '완료';
-     
+            doneButton.style.text
         };
 
         item.appendChild(doneButton);
